@@ -3,6 +3,9 @@
 const Zoo = require('./Zoo')
 const ZooKeeper = require('./ZooKeeper')
 
+/**
+ * This class might be a bit confusing
+ */
 class Circus {
     constructor() {
         this.zoo = new Zoo()
