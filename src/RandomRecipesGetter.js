@@ -18,14 +18,15 @@ class RandomRecipesGetter {
     getRandomRecipes(amount) {
         const promises = []
         
-        return new Promise((resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
             for (let x = 1; x <= amount; x++) {
                 const recipePromise = this.getOneRandomRecipe()
                 promises.push(recipePromise)
             }
 
-            Promise.all(promises)
-                .then(foods => { resolve(foods) })
+            resolve(
+                await Promise.all(promises)
+            )
         })
     }
 
