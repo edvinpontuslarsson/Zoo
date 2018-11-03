@@ -1,33 +1,12 @@
 'use strict'
 
 class ZooKeeper {
-    constructor () {
-        this.foods = [
-            
-            // for the penguin
-            'plastic bag',
-            'fish',
-            'donut',
-
-            // for the lion
-            'bacon',
-            'zookeeper',
-            'penguin',
-
-            // for the ant
-            'apple',
-            'banana',
-            'pizza',
-
-            // for the spider
-            'fly',
-            'ant',
-            'lion'
-        ]
+    constructor (foods) {
+        this.foods = foods
     }
 
     feedAnimal(animal) {
-        const food = this.foods.shift()
+        const food = this.foods.pop()
         animal.putFoodInMouth(food)
     }
 }

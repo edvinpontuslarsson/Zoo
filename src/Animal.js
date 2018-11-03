@@ -6,6 +6,7 @@ class Animal {
         this.legs = legs
         
         this.mouth = []
+        this.foodLimit = 3
     }
 
     putFoodInMouth(food) {
@@ -13,7 +14,7 @@ class Animal {
     }
 
     isStillHungry() {
-        return this.mouth.length < 3
+        return this.mouth.length < this.foodLimit
     }
 }
 
