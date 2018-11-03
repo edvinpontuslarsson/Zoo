@@ -1,0 +1,24 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "Example of Object Oriented JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edvinpontuslarsson/Zoo.git"
+  },
+  "keywords": [
+    "OOP",
+    "JavaScript"
+  ],
+  "author": "Edvin Larsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edvinpontuslarsson/Zoo/issues"
+  },
+  "homepage": "https://github.com/edvinpontuslarsson/Zoo#readme"
+}

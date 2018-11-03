@@ -1,11 +1,8 @@
 'use strict'
 
-// instead of npm start, run:
-// node app
-
-const Zoo = require('./Zoo')
-const ZooKeeper = require('./ZooKeeper')
-const Circus = require('./Circus')
+const Zoo = require('./src/Zoo')
+const ZooKeeper = require('./src/ZooKeeper')
+const Circus = require('./src/Circus')
 
 const zoo = new Zoo()
 const zooKeeper = new ZooKeeper()
