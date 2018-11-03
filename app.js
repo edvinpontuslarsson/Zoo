@@ -7,38 +7,33 @@ const Circus = require('./src/Circus')
 
 startApp()
 
-// async to be able to use the await keyword
 async function startApp() {
     const zoo = new Zoo()
+
+    const foods = await getFoods(zoo)
+
+    const zooKeeper = new ZooKeeper(foods)
     
-    // await because recipes come from web API
-    const recipes = await getRecipes(zoo)
-    console.log(recipes)
-
-    // const zooKeeper = new ZooKeeper(recipes)
-
-    /*
     const circus = new Circus(zoo, zooKeeper)
     circus.perform()
-    */
 }
 
-async function getRecipes(zoo) {
-    const amount = getRecipesAmount(zoo)
+async function getFoods(zoo) {
+    const amount = getFoodAmount(zoo)
     const randomRecipesGetter = new RandomRecipesGetter()
     
-    const recipes = 
-        await randomRecipesGetter.getRandomRecipes(amount)
+    const foods = 
+        await randomRecipesGetter.getRandomFoods(amount)
 
-    return recipes
+    return foods
 }
 
-function getRecipesAmount(zoo) {
-    let rightRecipesAmount = 0
+function getFoodAmount(zoo) {
+    let foodAmount = 0
 
     zoo.Animals.forEach(animal => 
-        rightRecipesAmount += animal.foodLimit
+        foodAmount += animal.foodLimit
     )
 
-    return rightRecipesAmount
+    return foodAmount
 }
