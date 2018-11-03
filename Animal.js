@@ -11,6 +11,10 @@ class Animal {
     putFoodInMouth(food) {
         this.mouth.push(food)
     }
+
+    isStillHungry() {
+        return this.mouth.length < 3
+    }
 }
 
 module.exports = Animal

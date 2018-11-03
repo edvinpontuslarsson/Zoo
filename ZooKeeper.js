@@ -2,11 +2,33 @@
 
 class ZooKeeper {
     constructor () {
-        // nothing here yet
+        this.foods = [
+            
+            // for the penguin
+            'plastic bag',
+            'fish',
+            'donut',
+
+            // for the lion
+            'bacon',
+            'zookeeper',
+            'penguin',
+
+            // for the ant
+            'apple',
+            'banana',
+            'pizza',
+
+            // for the spider
+            'fly',
+            'ant',
+            'lion'
+        ]
     }
 
     feedAnimal(animal) {
-        animal.putFoodInMouth('apple')
+        const food = this.foods.shift()
+        animal.putFoodInMouth(food)
     }
 }
 
