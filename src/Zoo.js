@@ -10,11 +10,11 @@ class Zoo {
 
     createAnimals() {
         const species = ['penguin', 'lion', 'ant', 'spider']        
-        let legsAmount = 0
+        let legAmount = 0
 
         for (let i = 0; i < species.length; i++) {
-            legsAmount += 2
-            const animal = new Animal(species[i], legsAmount)            
+            legAmount += 2
+            const animal = new Animal(species[i], legAmount)            
             this.Animals.push(animal)
         }
     }
