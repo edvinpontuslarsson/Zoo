@@ -3,26 +3,18 @@
 class ZooKeeper {
     constructor () {
         this.foods = [
-            
-            // for the penguin
-            'plastic bag',
+            'tomato',
             'fish',
             'donut',
-
-            // for the lion
             'bacon',
-            'zookeeper',
-            'penguin',
-
-            // for the ant
+            'peach',
+            'carrot',
             'apple',
             'banana',
             'pizza',
-
-            // for the spider
             'fly',
-            'ant',
-            'lion'
+            'cake',
+            'potato'
         ]
     }
 
