@@ -10,7 +10,7 @@ startApp()
 async function startApp() {
     const zoo = new Zoo()
 
-    const foods = await getFoods(zoo)
+    const foods = await getPromiseFoods(zoo)
 
     const zooKeeper = new ZooKeeper(foods)
     
@@ -18,14 +18,13 @@ async function startApp() {
     circus.perform()
 }
 
-async function getFoods(zoo) {
+function getPromiseFoods(zoo) {
     const amount = getFoodAmount(zoo)
     const randomRecipesGetter = new RandomRecipesGetter()
     
-    const foods = 
-        await randomRecipesGetter.getRandomFoods(amount)
+    const promiseFoods = randomRecipesGetter.getRandomFoods(amount)
 
-    return foods
+    return promiseFoods
 }
 
 function getFoodAmount(zoo) {

@@ -15,22 +15,6 @@ class RandomRecipesGetter {
         return foods
     }
 
-    /*
-    getRandomRecipeArrays(amount) {
-        const promises = []
-        
-        return new Promise(async (resolve, reject) => {
-            for (let x = 1; x <= amount; x++) {
-                const recipePromise = this.getOneRandomRecipe()
-                promises.push(recipePromise)
-            }
-
-            resolve(
-                await Promise.all(promises)
-            )
-        })
-    }*/
-
     getOneRandomRecipeArray(amount) { // used in url
         return new Promise((resolve, reject) => {
             unirest.get(`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=${amount}`)
@@ -39,6 +23,22 @@ class RandomRecipesGetter {
                 .end((result) => resolve(result.body.recipes))
         })
     }
+
+    /*
+    getRandomRecipeArrays(amount) {
+        const promises = []
+        
+        return new Promise(async (resolve, reject) => {
+            for (let x = 1; x <= amount; x++) {
+                const recipePromise = this.getOneRandomRecipeArray()
+                promises.push(recipePromise)
+            }
+
+            resolve(
+                await Promise.all(promises)
+            )
+        })
+    }*/
 }
 
 module.exports = RandomRecipesGetter
